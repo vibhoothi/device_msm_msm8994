@@ -74,7 +74,29 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += libGLES_android
 
 # Audio configuration file
--include $(TOPDIR)hardware/qcom/audio/configs/msm8994/msm8994.mk
+ifeq ($(TARGET_USES_AOSP), true)
+PRODUCT_COPY_FILES += \
+    device/qcom/common/media/audio_policy.conf:system/etc/audio_policy.conf
+else
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8994/audio_policy.conf:system/etc/audio_policy.conf
+endif
+
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8994/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
+    device/qcom/msm8994/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    device/qcom/msm8994/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/qcom/msm8994/mixer_paths_i2s.xml:system/etc/mixer_paths_i2s.xml \
+    device/qcom/msm8994/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
+    device/qcom/msm8994/audio_platform_info_i2s.xml:system/etc/audio_platform_info_i2s.xml \
+    device/qcom/msm8994/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    device/qcom/msm8994/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
+    device/qcom/msm8994/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    device/qcom/msm8994/tfa98xx.cnt:system/etc/firmware/tfa98xx.cnt
+
+# Listen configuration file
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8994/listen_platform_info.xml:system/etc/listen_platform_info.xml
 
 # WLAN driver configuration files
 PRODUCT_COPY_FILES += \
@@ -151,3 +173,9 @@ PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res \
 #for android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files
+
+# Low latency audio buffer size in frames
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio_hal.period_size=192
+
+$(call inherit-product-if-exists, device/msm/msm8994/device-vendor.mk)
