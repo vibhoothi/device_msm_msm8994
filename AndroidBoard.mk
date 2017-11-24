@@ -23,7 +23,7 @@ ifeq ($(KERNEL_DEFCONFIG),)
     KERNEL_DEFCONFIG := msm8994_defconfig
 endif
 
-include kernel/AndroidKernel.mk
+include kernel/msm/msm8994/AndroidKernel.mk
 
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
