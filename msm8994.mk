@@ -109,7 +109,7 @@ PRODUCT_PACKAGES += \
 
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8996/sensors/hals.conf:system/etc/sensors/hals.conf
+    device/msm/msm8994/sensors/hals.conf:system/etc/sensors/hals.conf
 
 # Sensor features
 PRODUCT_COPY_FILES += \
@@ -125,8 +125,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.ambient_temperature.xml:system/etc/permissions/android.hardware.sensor.ambient_temperature.xml \
     frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:system/etc/permissions/android.hardware.sensor.relative_humidity.xml \
 
-PRODUCT_COPY_FILES += \
-    device/msm/msm8994/sensors/hals.conf:system/etc/sensors/hals.conf
 
 # MIDI feature
 PRODUCT_COPY_FILES += \
