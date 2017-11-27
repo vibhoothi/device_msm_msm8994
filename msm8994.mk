@@ -136,8 +136,10 @@ PRODUCT_PACKAGES += \
     libantradio \
     antradio_app
 
-PRODUCT_SUPPORTS_VERITY := true
-PRODUCT_SYSTEM_VERITY_PARTITION :=  /dev/block/bootdevice/by-name/system
+#dm-verity Config
+#PRODUCT_SUPPORTS_VERITY := true
+#PRODUCT_SYSTEM_VERITY_PARTITION :=  /dev/block/bootdevice/by-name/system
+
 PRODUCT_AAPT_CONFIG += xlarge large
 
 #QTIC flag
