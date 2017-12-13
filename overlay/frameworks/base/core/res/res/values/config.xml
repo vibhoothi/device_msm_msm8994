@@ -31,14 +31,14 @@
 <resources>
    <!-- Whether cpu boost is enabled for overscroller fling. -->
    <!-- Whether cpu boost is enabled for application's 1st launch. -->
-    <bool name="config_enableCpuBoostForAppLaunch">true</bool>
-    <integer name="launchboost_timeout_param">2000</integer>
-    <integer-array name="launchboost_param_value">
-        <item>0x40C00000</item> <!-- SCHEDBOOST resource opcode-->
-        <item>0x1</item>        <!-- SCHEDBOOST resource value-->
-        <item>0x40800100</item> <!-- CPUBOOST_MIN_FREQ LITTEL Core resource opcode-->
-        <item>1300</item>     <!-- CPUBOOST MIN_FREQ resource value-->
-     </integer-array>
+    <!-- bool name="config_enableCpuBoostForAppLaunch">true</bool -->
+    <!-- integer name="launchboost_timeout_param">2000</integer -->
+    <!-- integer-array name="launchboost_param_value" -->
+        <!--item>0x40C00000</item> < SCHEDBOOST resource opcode-->
+        <!--item>0x1</item>        <!-- SCHEDBOOST resource value-->
+        <!--item>0x40800100</item> <!-- CPUBOOST_MIN_FREQ LITTEL Core resource opcode-->
+        <!--item>1300</item>     <!-- CPUBOOST MIN_FREQ resource value-->
+     <!--/integer-array>
 
    <!-- Operating volatage for bluetooth controller. 0 by default-->
    <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3300</integer>
