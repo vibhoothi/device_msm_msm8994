@@ -16,11 +16,7 @@ TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-ifneq ($(TARGET_USES_AOSP), true)
 TARGET_2ND_CPU_VARIANT := cortex-a53
-else
-TARGET_2ND_CPU_VARIANT := cortex-a9
-endif
 
 TARGET_CPU_CORTEX_A53 := true
 
@@ -122,7 +118,5 @@ endif
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
-
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
 TARGET_USES_IMS := true
