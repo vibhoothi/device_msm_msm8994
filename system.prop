@@ -28,11 +28,10 @@ persist.mdpcomp_perfhint=50
 debug.mdpcomp.logs=0
 persist.metadata_dynfps.disable=true
 persist.hwc.ptor.enable=true
-dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 
-ro.sf.lcd_density=560
+ro.sf.lcd_density=420
 ro.hdmi.enable=true
 persist.speaker.prot.enable=false
 #0 is default(30 min)
@@ -61,9 +60,6 @@ av.debug.disable.pers.cache=true
 #37491 is decimal sum of supported codecs in AAL
 #codecs: DivX DivXHD AVI AC3 ASF AAC QCP DTS 3G2 MP2TS
 mm.enable.qcom_parser=3379827
-
-# Enable AwesomePlayer stats
-persist.debug.sf.statistics=1
 
 # Print clip name being played
 media.stagefright.log-uri=1
@@ -95,7 +91,7 @@ persist.timed.enable=true
 ro.opengles.version=196610
 
 # System property for cabl
-ro.qualcomm.cabl=2
+ro.qualcomm.cabl=0
 
 #
 # System props for telephony
@@ -117,13 +113,6 @@ persist.fuse_sdcard=true
 
 #system prop for Bluetooth SOC type
 qcom.bluetooth.soc=rome
-
-#system prop for wipower support
-ro.bluetooth.wipower=true
-
-#Set this true, if ROME is programmed
-#as embedded wipower mode by default
-ro.bluetooth.emb_wp_mode=true
 
 #
 #snapdragon value add features
@@ -171,11 +160,6 @@ audio.deep_buffer.media=true
 #property to enable VDS WFD solution
 persist.hwc.enable_vds=1
 
-#property for vendor specific library
-ro.vendor.at_library=libqti-at.so
-ro.vendor.gt_library=libqti-gt.so
-sys.games.gt.prof=1
-
 #hwui properties
 ro.hwui.texture_cache_size=72
 ro.hwui.layer_cache_size=48
@@ -195,9 +179,6 @@ qemu.hw.mainkeys=0
 #enable voice path for PCM VoIP by default
 use.voice.path.for.pcm.voip=true
 
-#selects CoreSight configuration to enable
-persist.debug.coresight.config=stm-events
-
 #System property for FM transmitter
 ro.fm.transmitter=false
 
@@ -206,6 +187,3 @@ audio.dolby.ds2.enabled=true
 
 #enable property for hard bypass
 audio.dolby.ds2.hardbypass=true
-
-# Create zram disk
-ro.config.zram=true
