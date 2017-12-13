@@ -48,7 +48,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/oneplus/plutonium/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/oneplus/oneplus2/rootdir/etc/fstab.qcom
 
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
