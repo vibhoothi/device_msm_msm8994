@@ -11,6 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+# Include vendor/vertex configuration
+include vendor/vertex/main.mk
+
 DEVICE_PACKAGE_OVERLAYS := device/oneplus/oneplus2/overlay
 
 ifneq ($(TARGET_USES_AOSP),true)
