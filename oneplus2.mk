@@ -84,12 +84,12 @@ PRODUCT_PACKAGES += libGLES_android
 PRODUCT_COPY_FILES += \
     device/oneplus/oneplus2/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat \
     device/oneplus/oneplus2/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/oneplus/oneplus2/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
+    device/oneplus/oneplus2/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
     device/oneplus/oneplus2/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     device/oneplus/oneplus2/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     device/oneplus/oneplus2/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
-    device/oneplus/oneplus2/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    device/oneplus/oneplus2/hostapd.deny:system/etc/hostapd/hostapd.deny
+    device/oneplus/oneplus2/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    device/oneplus/oneplus2/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny
 
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
