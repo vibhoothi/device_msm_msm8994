@@ -160,3 +160,6 @@ PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res \
 #for android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files
+
+# Call Oneplus2 Blobs
+$(call inherit-product, vendor/oneplus/oneplus2/oneplus2-vendor.mk)
