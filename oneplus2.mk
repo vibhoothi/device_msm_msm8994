@@ -28,9 +28,9 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 
 # copy customized media_profiles and media_codecs xmls for 8994
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/oneplus/oneplus2/media_profiles.xml:system/etc/media_profiles.xml \
-                      device/oneplus/oneplus2/media_codecs.xml:system/etc/media_codecs.xml \
-                      device/oneplus/oneplus2/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
+PRODUCT_COPY_FILES += device/oneplus/oneplus2/media/media_profiles.xml:system/etc/media_profiles.xml \
+                      device/oneplus/oneplus2/media/media_codecs.xml:system/etc/media_codecs.xml \
+                      device/oneplus/oneplus2/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
 PRODUCT_COPY_FILES += device/oneplus/oneplus2/whitelistedapps.xml:system/etc/whitelistedapps.xml
@@ -82,9 +82,14 @@ PRODUCT_PACKAGES += libGLES_android
 
 # WLAN driver configuration files
 PRODUCT_COPY_FILES += \
-    device/oneplus/oneplus2/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat \
-    device/oneplus/oneplus2/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/oneplus/oneplus2/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
+    device/oneplus/oneplus2/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat \
+    device/oneplus/oneplus2/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/oneplus/oneplus2/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
+    device/oneplus/oneplus2/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/oneplus/oneplus2/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    device/oneplus/oneplus2/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
+    device/oneplus/oneplus2/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    device/oneplus/oneplus2/hostapd.deny:system/etc/hostapd/hostapd.deny
 
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
