@@ -95,6 +95,35 @@ PRODUCT_COPY_FILES += \
  PRODUCT_PACKAGES += \
     lights.msm8994
 
+# IPA
+PRODUCT_PACKAGES += \
+    ipacm \
+    ipacm-diag \
+    IPACM_cfg.xml
+
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8994 \
+    flp.conf \
+    gps.conf \
+    izat.conf \
+    lowi.conf \
+    quipc.conf \
+    sap.conf \
+    xtwifi.conf
+
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8994 \
+    libshim_camera \
+    libshim_ims-camera \
+    sensors.hal.tof
+
+# Keylayout
+PRODUCT_COPY_FILES += \
+    device/oneplus/oneplus2/keylayout/fpc1020.kl:system/usr/keylayout/fpc1020.kl \
+    device/oneplus/oneplus2/keylayout/synaptics.kl:system/usr/keylayout/synaptics.kl
+
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml

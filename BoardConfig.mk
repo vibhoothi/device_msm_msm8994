@@ -104,6 +104,13 @@ TARGET_INIT_VENDOR_LIB := libinit_msm
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Include path
+TARGET_SPECIFIC_HEADER_PATH := device/oneplus/oneplus2/include
+
+# Camera
+TARGET_ALLOW_TEXT_RELOCATIONS := true
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
