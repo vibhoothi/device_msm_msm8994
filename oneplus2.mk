@@ -91,6 +91,10 @@ PRODUCT_COPY_FILES += \
     device/oneplus/oneplus2/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
     device/oneplus/oneplus2/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny
 
+# Lights
+ PRODUCT_PACKAGES += \
+    lights.msm8994
+
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml
