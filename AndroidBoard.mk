@@ -106,9 +106,18 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
 LOCAL_SRC_FILES    := wifi/hostapd.deny
 include $(BUILD_PREBUILT)
 
+# Create symbolic links		
+$(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/qca_cld; \		
+         ln -sf  /system/etc/wifi/WCNSS_qcom_wlan_nv.bin \		
+         $(TARGET_OUT_ETC)/firmware/wlan/qca_cld/WCNSS_qcom_wlan_nv.bin; \
+         ln -sf /system/etc/wifi/WCNSS_qcom_cfg.ini \		
+         $(TARGET_OUT_ETC)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini)		
+endif		
+
 #----------------------------------------------------------------------
 # Radio image
 #----------------------------------------------------------------------
+
 ifeq ($(ADD_RADIO_FILES), true)
 radio_dir := $(LOCAL_PATH)/radio
 RADIO_FILES := $(shell cd $(radio_dir) ; ls)
