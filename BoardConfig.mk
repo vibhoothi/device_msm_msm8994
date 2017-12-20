@@ -30,7 +30,7 @@ BOOTLOADER_GCC_VERSION := arm-eabi-4.8
 BOOTLOADER_PLATFORM := msm8994 # use msm8994 LK configuration
 TARGET_NO_KERNEL := false
 TARGET_KERNEL_APPEND_DTB := true
-include device/qcom/msm8994/BoardConfigVendor.mk
+include device/msm/msm8994/BoardConfigVendor.mk
 
 # Some framework code requires this to enable BT
 BOARD_HAVE_BLUETOOTH := true

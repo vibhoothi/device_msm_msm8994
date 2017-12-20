@@ -80,7 +80,7 @@ ifneq (, $(filter $(PRODUCT_LIST), $(TARGET_PRODUCT)))
 #EDIT_END
 
   else
-    include device/qcom/$(TARGET_PRODUCT)/BoardConfig.mk
+    include device/msm/$(TARGET_PRODUCT)/BoardConfig.mk
   endif
 
   ifeq ($(call is-board-platform,msm8660),true)
